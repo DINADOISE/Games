@@ -7,11 +7,20 @@ print("get ready...\n1 2 3\n")
 
 count = 0
 R = random.randint(1, 9)
+
 print("My number is", R, "next number will be ?\nU for UPPER / L for LOWER")
-INPUT
-if input == ("U"):
-    if "U" > R:
-        print("NICE :)")
-if input == ("L"):
-    if "L" < R:
-        print("ohh, you lost :(")
+
+b = input("=>")
+count = 0
+
+while True:
+    if b == ("U"):
+        if ("U") > R:
+            print("NICE :)")
+            count += 1
+    if b == ("L"):
+        if ("L") < R:
+            print("ohh, you lost :(")
+            continue
+    else:
+        break
