@@ -3,8 +3,8 @@ import random
 print("Welcome to the UPPER / LOWER game\n")
 print("You should guss what the next number will be\n")
 print("Get started...\n")
+count = 0
 while True:
-    count = 0
     number_1 = random.randint(1, 9)
     number_2 = random.randint(1, 9)
     txt = "GAME OVER!"
