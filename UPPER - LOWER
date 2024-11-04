@@ -3,7 +3,7 @@ import random
 print("Welcome to the UPPER / LOWER game\n")
 print("You should guss what the next number will be\n")
 print("Get started...\n")
-count = 0
+score = 0
 while True:
     number_1 = random.randint(1, 9)
     number_2 = random.randint(1, 9)
@@ -13,27 +13,21 @@ while True:
     guess: str = input()
     if guess == "U":
         print("Next number is:", number_2)
-        if number_1 < number_2:
+        if number_1 <= number_2:
             print("NICE :), CORRECT\n")
-            count += 1
-        elif number_1 == number_2:
-            print("NICE :), CORRECT\n")
-            count += 1
+            score += 1
         else:
             print("Ohh, you lost :(")
-            print("Your final score is:",count)
+            print("Your final score is:",score)
             print(x)
             break
     if guess == "L":
         print("Next number is:", number_2)
-        if number_1 > number_2:
+        if number_1 >= number_2:
             print("NICE :), CORRECT\n")
-            count += 1
-        elif number_1 == number_2:
-            print("NICE :), CORRECT\n")
-            count += 1
+            score += 1
         else:
             print("Ohh, you lost :(")
-            print("Your final score is:",count)
+            print("Your final score is:",score)
             print(x)
             break
